@@ -1,5 +1,3 @@
-package pokemon;
-
 public class Pokemon {
 
     private int hp;
@@ -7,10 +5,11 @@ public class Pokemon {
     private String nombre;
     private String tipo;
 
-    public Pokemon(int hp, int nivel, String nombre, String tipo) {
-        this.nivel=nivel;
+    public Pokemon(String nombre,String tipo,int nivel,int hp) {
+       
         this.nombre = nombre;
-        this.tipo = tipo;
+        this.tipo = tipo; 
+        this.nivel=nivel;
         this.hp=100;
     }
     
@@ -43,14 +42,8 @@ public class Pokemon {
     }
     
     public void atacar(String movimiento, Pokemon pokemon){
-        System.out.printf("&s ataca a %s con %s\n",this.getNombre(),
+        System.out.printf("%s ataca a %s con %s\n",this.getNombre(),
                 pokemon.getNombre(),movimiento);
         pokemon.recibirAtaque(movimiento);   
     }
-    
-    public static void main(String[] args) {
-        // TODO code application logic here
-
-    }
-    
 }
