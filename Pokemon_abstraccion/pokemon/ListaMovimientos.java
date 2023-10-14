@@ -20,8 +20,8 @@ public class ListaMovimientos{
         movimientos.add(new Movimiento("Picotazo",35,Tipo.SINIESTRO,35));
         movimientos.add(new Movimiento("Ataque Ala",60,Tipo.SINIESTRO,35));
         //Movimientos de tipo agua
-        movimientos.add(new Movimiento("Placaje",40,Tipo.FANTASMA,35));
-        movimientos.add(new Movimiento("Mordisco",60,Tipo.FANTASMA,25));
+        movimientos.add(new Movimiento("Placaje",40,Tipo.AGUA,35));
+        movimientos.add(new Movimiento("Mordisco",60,Tipo.AGUA,25));
     }
 
     //Metodo que devuelve el movimiento uscando el nombre
