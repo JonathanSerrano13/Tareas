@@ -27,24 +27,37 @@ public abstract class Pokemon {
         this.movimientos = new Movimiento[4];
     }
 
-    public int getHp() {
-        return hp;
-    }
-
     public int getNivel() {
         return nivel;
-    }
-    
-
-    public String getNombre() {
-        return nombre;
     }
 
     public Tipo getTipo() {
         return tipo;
     }
-    
-    
+
+    public void getPs(){
+        return ps;
+    }
+
+    public void getAtaque(){
+        return ataque;
+    }
+
+    public void getDefenda(){
+        return defensa;
+    }
+
+    public void getAtaqueEspecial(){
+        return ataqueEspecial;
+    }
+
+    public void getDefensaEspecial(){
+        return defensaEspecial;
+    }
+
+    public void getVelocidad(){
+        return velocidad;
+    }
 
     public void setMovimiento(int indice,Movimiento movimientos) {
         this.movimientos[indice] = movimientos;
