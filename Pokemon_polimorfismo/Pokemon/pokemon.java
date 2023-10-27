@@ -1,19 +1,29 @@
 package pokemon;
 
 public abstract class Pokemon {
-
-    private int hp;
+    
     private int nivel;
-    private String nombre;
     private Tipo tipo;
+    private int ps;
+    private int ataque;
+    private int defensa;
+    private int ataqueEspecial;
+    private int defensaEspecial;
+    private int velocidad;
+
+   
     private Movimiento movimientos[];
 
-    public Pokemon(String nombre,Tipo tipo,int nivel) {
-       
-        this.nombre = nombre;
-        this.tipo = tipo; 
+    public Pokemon(int nivel, Tipo tipo, int ps, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int veloidad) {
+        
         this.nivel=nivel;
-        this.hp=250;
+        this.tipo = tipo; 
+        this.ps = ps;
+        this.ataque = ataque;
+        this.defensa = defensa;
+        this.ataqueEspecial = ataqueEspecial;
+        this.defensaEspecial = defensaEspecial;
+        this.velocidad = velocidad;
         this.movimientos = new Movimiento[4];
     }
 
