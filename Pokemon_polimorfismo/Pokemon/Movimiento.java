@@ -4,6 +4,7 @@ public class Movimiento{
     private String nombre;
     private int puntosdeAtaque,pp;
     private Tipo tipo;
+    private ataqueTipo Tipo;
 
 
     
