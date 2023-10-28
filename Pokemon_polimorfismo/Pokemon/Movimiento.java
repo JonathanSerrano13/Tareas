@@ -4,16 +4,21 @@ public class Movimiento{
     private String nombre;
     private int puntosdeAtaque,pp;
     private Tipo tipo;
-    private ataqueTipo Tipo;
+    private Clase ataqueTipo;
 
 
     
-    public Movimiento(String nombre, int puntosdeAtaque,Tipo tipo, int pp) {
+  
+    public Movimiento(String nombre, int puntosdeAtaque,Tipo tipo, int pp, Clase ataqueTipo) {
         this.nombre = nombre;
         this.puntosdeAtaque = puntosdeAtaque;
         this.tipo = tipo;
         this.pp = pp;
+        this.ataqueTipo = ataqueTipo;
+        
     }
+
+    
 
     public String getNombre() {
         return nombre;
@@ -30,5 +35,9 @@ public class Movimiento{
     public void setPp(int pp) {
         this.pp = pp;
     }
-    
-}
+      public pokemon.Clase getClase() {
+        return ataqueTipo;
+    }
+
+
+} 
