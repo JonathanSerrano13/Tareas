@@ -2,6 +2,7 @@ package pokemon;
 
 public abstract class Pokemon {
     
+    private String nombre;
     private int nivel;
     private Tipo tipo;
     private int ps;
@@ -14,9 +15,10 @@ public abstract class Pokemon {
    
     private Movimiento movimientos[];
 
-    public Pokemon(int nivel, Tipo tipo, int ps, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int veloidad) {
+    public Pokemon(String nombre, int nivel, Tipo tipo, int ps, int ataque, int defensa, int ataqueEspecial, int defensaEspecial, int velocidad) {
         
-        this.nivel=nivel;
+        this.nombre = nombre;
+        this.nivel= 10;
         this.tipo = tipo; 
         this.ps = ps;
         this.ataque = ataque;
@@ -27,6 +29,9 @@ public abstract class Pokemon {
         this.movimientos = new Movimiento[4];
     }
 
+    public String getNombre(){
+        return nombre;
+    }
     public int getNivel() {
         return nivel;
     }
@@ -35,27 +40,27 @@ public abstract class Pokemon {
         return tipo;
     }
 
-    public void getPs(){
+    public int getPs(){
         return ps;
     }
 
-    public void getAtaque(){
+    public int getAtaque(){
         return ataque;
     }
 
-    public void getDefenda(){
+    public int getDefensa(){
         return defensa;
     }
 
-    public void getAtaqueEspecial(){
+    public int getAtaqueEspecial(){
         return ataqueEspecial;
     }
 
-    public void getDefensaEspecial(){
+    public int getDefensaEspecial(){
         return defensaEspecial;
     }
 
-    public void getVelocidad(){
+    public int getVelocidad(){
         return velocidad;
     }
 
@@ -69,9 +74,8 @@ public abstract class Pokemon {
 
     private void calcularDanio(int danio,double efectividad){
         double puntosRestados=danio*efectividad;
-        this.hp-=puntosRestados;
-        System.out.printf("%s recibe %.2f puntos de danio\n",
-                this.getNombre(),puntosRestados);
+        this.ps -= puntosRestados;
+        System.out.printf("%s recibe %2f puntos de danio\n",this.getNombre(), puntosRestados);
     }
     
     public void recibirAtaque(Movimiento movimiento,double efectividad){
@@ -103,3 +107,4 @@ public abstract class Pokemon {
     public abstract double obtenerEfectividad(Pokemon pokemon);
 
 }
+
