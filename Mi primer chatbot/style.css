@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: wheat; /* Un tono más suave */
+}
+
+header {
+    background-color: black; /* Un tono de gris oscuro */
+    color: white;
+    padding: 20px; /* Más espacio alrededor del encabezado */
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#chat-container {
+    background-color: white; /* Blanco puro */
+    border-radius: 20px; /* Esquinas más redondeadas */
+    height: 400px; /* Un poco más corto */
+    overflow-y: auto; /* Cambiado a auto para que aparezca la barra solo cuando sea necesario */
+    margin-bottom: 20px; /* Más espacio debajo del contenedor del chat */
+    padding: 20px;
+}
+
+#chat-history {
+    overflow: hidden;
+}
+
+#input-container {
+    display: flex;
+    align-items: center; /* Alinear los elementos verticalmente */
+}
+
+#user-input {
+    flex: 1;
+    padding: 15px; /* Más espacio de relleno */
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 2px solid black; /* Borde más prominente */
+}
+
+#send-button {
+    padding: 15px 30px; /* Botón más grande */
+    background-color: black; /* Color de fondo más oscuro */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black; /* Color de fondo más oscuro */
+    color: white;
+    padding: 20px; /* Más espacio alrededor del pie de página */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
